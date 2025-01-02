@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 100px;
+}
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+}
+h1{
+    font-weight: bold;
+    color: rgb(56, 201, 169);
+    user-select: none;
+    letter-spacing: 4px;
+    font-size: 2.5rem;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+}
+h1 b{
+    color: white;
+}
+h2{
+    font-weight: bold;
+    color: rgb(72, 204, 165);
+    user-select: none;
+    letter-spacing: 4px;
+    font-family: "Lato", sans-serif;
+}
+h2 b{
+    color: aqua;
+}
+h3{
+    color: white;
+}
+header a{
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 25px;
+    color: #2ecca4;
+    border: 2px solid #2ecca4;
+    border-radius: 30px;
+    transition: ease 0.4s;
+}
+header a:hover{
+    transition: ease 0.4s;
+    color: white;
+    background-color: #2ecca4;
+}
+body {
+    background-image: url('../background.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0 50px;
+}
+
+
+.body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.tableDiv {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%; /* Garante que a div use toda a largura disponível */
+    overflow-x: auto; /* Permite a rolagem horizontal */
+}
+
+table {
+    width: 100%; /* Garante que a tabela use toda a largura disponível */
+    border-collapse: collapse;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 0;
+    min-width: 1200px; /* Define uma largura mínima para garantir que a tabela não seja comprimida demais */
+}
+
+/* Cabeçalho */
+thead tr {
+    background-color: #2ecca4;
+    color: #ffffff;
+    text-align: left;
+    font-size: 18px;
+}
+
+th, 
+td {
+    padding: 20px 25px;
+    border-bottom: 1px solid #dddddd;
+    
+}
+
+/* Cor das linhas */
+tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tbody tr:hover {
+    background-color: #e9e9e9;
+    cursor: pointer;
+}
+/* Célula de ações */
+table td:last-child {
+    text-align: center; /* Centraliza os links */
+    padding: 15px; /* Espaçamento interno */
+}
+
+table td:last-child a {
+    display: inline-block; /* Garante espaçamento entre links */
+    margin: 5px 10px; /* Espaçamento entre os botões */
+    padding: 8px 12px; /* Tamanho clicável dos botões */
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: 0.3s ease;
+    font-size: 1rem;
+}
+.edit {
+    color: #4CAF50;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #4CAF50;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    transition: 0.3s ease;
+}
+
+.edit:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.remove {
+    color: #e74c3c;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    transition: 0.3s ease;
+}
+
+.remove:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+.cadastrar{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: ease .4s;
+}
+.cadastrar:hover{
+    text-decoration: underline;
+    color: #92ffe4de;
+    transition: ease .4s;
+}
+/* @media (max-width: 500px){
+    body{
+        width: 100%;
+
+    }
+    header{
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 2px;
+    }
+    ul{
+        display: inline-block;
+    }
+    .body{
+        width: 100%;
+        height: 100%;
+    }
+} */
+@media (max-width: 1200px) {
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 150px;
+        
+        }
+    .body {
+        margin-top: 30px;
+    }
+    .table {
+        width: 100%;
+        overflow-x: auto; 
+        margin-top: 20px; 
+        
+    }
+    table {
+        width: 80%;
+        flex-grow: 1;
+        overflow:auto;
+        margin: 5px;
+    }
+
+    table th, table td {
+        padding: 15px;
+    }
+    
+    
+}
+
+@media (max-width: 1024px) {
+    body {
+        margin-top: 30px;
+        font-size: 15px;
+    }    
+    h1 {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .body {
+        margin: 50px 10px;
+    }
+    .table {
+        width: 100%;
+        overflow-x: auto; 
+        margin-top: 20px; 
+        
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow:auto;
+        border: 0;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        height: 150px;
+        
+        }
+
+    ul{
+        margin: 20px;
+        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        
+    }
+    li{
+        margin: 10px;
+
+    }
+
+    .ul{
+        width: 100%;
+        overflow-x: auto; 
+
+    }
+    .ul::-webkit-scrollbar {
+        display: none;
+    }
+    h2{
+        font-weight: bold;
+        color: rgb(72, 204, 165);
+        user-select: none;
+        letter-spacing: 4px;
+        font-family: "Lato", sans-serif;
+        font-size: 30px;
+    }
+    h2 b{
+        color: aqua;
+    }
+    h3{
+        color: white;
+    }
+}
+    
+@media (max-width: 600px) {
+
+body {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex-grow: 1;
+}    
+    h1 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .body {
+        margin: 50px 10px;
+        
+    }
+    .cadastrar {
+        font-size: 0.9rem;
+    }
+
+    .table {
+        width: 100%;
+        overflow-x: auto; 
+        margin-top: 20px; 
+        
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+        border: 0;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        height: 150px;
+    }
+
+    ul{
+        margin: 20px;
+        flex-wrap: wrap;
+        flex-grow: 1;
+    }
+    li{
+        margin: 10px;
+        font-size: .6rem;
+    }
+
+    .ul{
+        width: 100%;
+        overflow-x: auto; 
+    }
+    .ul::-webkit-scrollbar {
+        display: none;
+    }
+}
